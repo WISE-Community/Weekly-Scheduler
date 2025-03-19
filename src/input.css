@@ -18,6 +18,14 @@ th, td {
 }
 
 button {
-  @apply py-2 px-3 text-white rounded-md text-sm font-semibold cursor-pointer hover:bg-[#005d76] active:bg-[#00799C];
+  @apply py-2 px-3 text-white rounded-md text-sm font-semibold cursor-pointer hover:bg-[#005d76] active:bg-[#00799C] disabled:bg-neutral-300 disabled:text-neutral-500 disabled:cursor-not-allowed;
   background-color: #00799C;
+}
+
+.changed {
+  @apply text-red-700;
+}
+
+.submitted {
+  @apply text-green-700;
 }

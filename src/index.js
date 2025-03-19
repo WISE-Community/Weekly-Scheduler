@@ -53,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add event listener to update day status on change
     checkbox.addEventListener("change", function () {
       dayStatuses[day] = this.checked;
+      submitButton.disabled = false;
+      confirmationMessage.textContent = "Selection changed. Press Submit to update.";
+      confirmationMessage.classList.remove("submitted");
+      confirmationMessage.classList.add("changed");
     });
   });
 
@@ -86,7 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Send component state to parent
     wiseAPI.sendMessageToParent(componentState);
     setTimeout(function () {
+      confirmationMessage.classList.remove("changed");
+      confirmationMessage.classList.add("submitted");
       confirmationMessage.textContent = "Schedule updated!";
     }, 1000);
+
+    submitButton.disabled = true;
   });
 });

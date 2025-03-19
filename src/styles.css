@@ -7,7 +7,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-700: oklch(0.505 0.213 27.518);
+    --color-green-700: oklch(0.527 0.154 150.069);
     --color-gray-300: oklch(0.872 0.01 258.338);
+    --color-neutral-300: oklch(0.87 0 0);
+    --color-neutral-500: oklch(0.556 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -235,7 +239,22 @@ button {
   &:active {
     background-color: #00799C;
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:disabled {
+    background-color: var(--color-neutral-300);
+  }
+  &:disabled {
+    color: var(--color-neutral-500);
+  }
   background-color: #00799C;
+}
+.changed {
+  color: var(--color-red-700);
+}
+.submitted {
+  color: var(--color-green-700);
 }
 @property --tw-font-weight {
   syntax: "*";
