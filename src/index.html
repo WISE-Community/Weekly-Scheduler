@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_month"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Weekly Schedule</title>
+  </head>
+  <body class="m-4">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined">calendar_month</span>
+      <h1 class="text-lg font-bold">Weekly Schedule</h1>
+    </div>
+    <p id="instructions"></p>
+    <table class="my-4">
+      <thead>
+        <tr id="table-header"></tr>
+        <tr id="table-content"></tr>
+      </thead>
+    </table>
+    <div class="flex gap-2 items-center">
+      <button>Submit</button>
+      <span id="submit-msg" class="text-sm"></span>
+    </div>
+  </body>
+  <script src="./index.js" defer type="module"></script>
+</html>
